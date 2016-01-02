@@ -6,6 +6,7 @@ namespace SqlLitePCL
 	{
 		public Behavior ()
 		{
+			
 		}
 	}
 }

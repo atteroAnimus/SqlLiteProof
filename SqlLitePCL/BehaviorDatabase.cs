@@ -1,16 +1,22 @@
 ﻿using System;
 using SQLite;
+using Xamarin.Forms;
 
 namespace SqlLitePCL
 {
 	public class BehaviorDatabase : ISQLite
 	{
-		public BehaviorDatabase ()
+		private SQLiteConnection _connection;
+
+		public BehaviorDatabase()
 		{
+			_connection = DependencyService.Get<ISQLite>().GetConnection();
+			_connection.CreateTable<Behavior>();
 		}
-		SQLiteConnection GetConnection()
+
+		public SQLiteConnection GetConnection()
 		{
-			
+			throw new NotImplementedException();
 		}
 	}
 }
